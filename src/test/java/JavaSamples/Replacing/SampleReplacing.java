@@ -69,5 +69,8 @@ public class SampleReplacing {
         else {
             System.out.println("String is empty");
         }
+        String message="  Additional screen can be purchased separately. You cannot unsubscribe till 2021-11-30.";
+        String Date=message.replaceAll("[^-0-9]","");
+        System.out.println("Date is "+Date);
     }
 }
