@@ -31,3 +31,15 @@ d
 4src/test/java/JavaSamples/StartExamples/Sample3.java,1\b\1b5ef89ca0a1eda2d201fe21671f9d93561c17be
 d
 4src/test/java/JavaSamples/StartExamples/Sample4.java,9\5\95a637a7f7fdc480c70801ad3fb524ad227a8075
+h
+8src/test/java/JavaSamples/ArrayList/SampleArrayList.java,8\b\8b89cc6c764cdae2307eda0cab06594851bfd4a3
+Z
+*src/test/java/JavaSamples/Pattern/Ex1.java,a\7\a7e692bfdd0d418a1f4d212c61645dec8ac3d32b
+\
+,src/test/java/JavaSamples/Exercises/Ex2.java,1\e\1e61d17b309c3b557b99694dba00a2b6fd2d0208
+\
+,src/test/java/JavaSamples/Exercises/Ex1.java,8\d\8d7ccf0922f7f84bc0fe4af22fd09a9fa29d102d
+\
+,src/test/java/JavaSamples/Exercises/Ex3.java,9\0\90f23c07a4638bd61cd432917ba24aee4ce4958e
+\
+,src/test/java/JavaSamples/Exercises/Ex4.java,1\b\1b845ae4dd52853dd0653a14e1cd1f85bbef5a55
