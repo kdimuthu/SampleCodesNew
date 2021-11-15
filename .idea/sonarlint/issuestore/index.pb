@@ -43,3 +43,13 @@ Z
 ,src/test/java/JavaSamples/Exercises/Ex3.java,9\0\90f23c07a4638bd61cd432917ba24aee4ce4958e
 \
 ,src/test/java/JavaSamples/Exercises/Ex4.java,1\b\1b845ae4dd52853dd0653a14e1cd1f85bbef5a55
+\
+,src/test/java/JavaSamples/Exercises/Ex5.java,5\3\53d42694584eee5447970be69cc0f4436f599e95
+`
+0src/test/java/JavaSamples/Exercises/Student.java,0\3\031b633a6ae81872be2f7a0095960c5839e41f30
+b
+2src/test/java/JavaSamples/TwoDArray/TwoDArray.java,1\5\15b83b0d017441cab017953e9b5459fe9866317b
+\
+,src/test/java/TestNGSampels/TestNGTests.java,5\6\560214b8ea7b6288fe29dac847806d34e952b242
+d
+4src/test/java/SeleniumSamples/FirstSeleniumTest.java,c\f\cfa8cbc03e54f7910617e540ded8831dd1099bec
