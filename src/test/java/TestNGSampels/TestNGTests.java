@@ -21,7 +21,7 @@ public class TestNGTests {
         driver.manage().window().maximize();
         driver.findElement(By.name("userName")).sendKeys("dimuthu");
         String actualTest=driver.findElement(By.xpath("")).getText();
-        String expectedTest="";
+        String expectedTest="fdfkjkl";
         Assert.assertEquals(actualTest,expectedTest);
     }
 

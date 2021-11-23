@@ -53,3 +53,5 @@ b
 ,src/test/java/TestNGSampels/TestNGTests.java,5\6\560214b8ea7b6288fe29dac847806d34e952b242
 d
 4src/test/java/SeleniumSamples/FirstSeleniumTest.java,c\f\cfa8cbc03e54f7910617e540ded8831dd1099bec
+j
+:src/test/java/TestNGSampels/TestNGTestsWIthBeforeTest.java,3\6\363bf8d961f21072a7fc83e5ab04f3385bc23ca7

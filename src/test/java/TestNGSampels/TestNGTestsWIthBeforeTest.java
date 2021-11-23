@@ -20,8 +20,22 @@ public class TestNGTestsWIthBeforeTest {
         driver = new ChromeDriver();
     }
 
-    @Test
+    @Test(priority = 1,enabled = false)
     public void Login() {
+        System.out.println("Test");
+
+
+        driver.get("http://demo.guru99.com/test/newtours/");
+        driver.manage().window().maximize();
+        driver.findElement(By.name("userName")).sendKeys("dimuthu");
+        String actualTest = driver.findElement(By.xpath("")).getText();
+        String expectedTest = "";
+        Assert.assertEquals(actualTest, expectedTest);
+    }
+
+    @Test(priority = 2,enabled = false)
+    public void Login1() {
+        System.out.println("Test");
 
         driver.get("http://demo.guru99.com/test/newtours/");
         driver.manage().window().maximize();
