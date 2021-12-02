@@ -18,6 +18,8 @@ public class DatesExamples {
 
         //Display Current Date
         LocalDate.now();
+        String date=LocalDate.now().toString();
+        System.out.println("Date after converting to string is "+date);
         System.out.println("Current Date is :"+LocalDate.now());
 
         //Display Current Time
@@ -31,6 +33,10 @@ public class DatesExamples {
         //Get the end date of current month
         LocalDate EndDateOfCurrentMonthBeforeFormat=LocalDate.now().with(TemporalAdjusters.lastDayOfMonth());
         System.out.println("End Date of Current Month is :"+EndDateOfCurrentMonthBeforeFormat);
+
+        //Get the end date of current year
+        LocalDate EndDateOfCurrentYearBeforeFormat=LocalDate.now().with(TemporalAdjusters.lastDayOfYear());
+        System.out.println("End Date of Current Year is :"+EndDateOfCurrentYearBeforeFormat);
 
         //Change the Format the date
         String EndDateOfCurrentMonth = EndDateOfCurrentMonthBeforeFormat.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
