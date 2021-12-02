@@ -8,6 +8,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class DatesExamples {
     public static void main(String []args) {
@@ -34,6 +36,10 @@ public class DatesExamples {
         LocalDate EndDateOfCurrentMonthBeforeFormat=LocalDate.now().with(TemporalAdjusters.lastDayOfMonth());
         System.out.println("End Date of Current Month is :"+EndDateOfCurrentMonthBeforeFormat);
 
+        //Get the tomorrow Date
+        LocalDate TomorrowDate=LocalDate.now().plusDays(1);
+        System.out.println("Tomorrow is :"+TomorrowDate);
+
         //Get the end date of current year
         LocalDate EndDateOfCurrentYearBeforeFormat=LocalDate.now().with(TemporalAdjusters.lastDayOfYear());
         System.out.println("End Date of Current Year is :"+EndDateOfCurrentYearBeforeFormat);
@@ -59,5 +65,29 @@ public class DatesExamples {
         Date todayInDifferentWay = Calendar.getInstance().getTime();
         System.out.println("Current Date is(same date in using a different way :"+todayInDifferentWay);
 
+        //Generate random date
+        long minDay = LocalDate.of(2022, 1, 1).toEpochDay();
+        long maxDay = LocalDate.of(2050, 12, 31).toEpochDay();
+        long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
+        LocalDate randomDate = LocalDate.ofEpochDay(randomDay);
+        System.out.println("Random date is "+randomDate);
+
+        //Generate future date
+        Random randomDays = ThreadLocalRandom.current();
+        LocalDate futureDate = LocalDate.now().plusDays(randomDays.nextInt(365) + 1);
+        System.out.println("Future date is "+futureDate);
+
+        //Generate yesterday
+        LocalDate previousDate = LocalDate.now().minusDays(1);
+        System.out.println("Yesterday date is "+previousDate);
+
+        //generate past date
+        LocalDate startDate = LocalDate.of(2020, 1, 1);
+        long start = startDate.toEpochDay();
+        LocalDate endDate = LocalDate.now().minusDays(1);
+        long end = endDate.toEpochDay();
+        long randomEpochDay = ThreadLocalRandom.current().longs(start, end).findAny().getAsLong();
+        LocalDate pastDate=LocalDate.ofEpochDay(randomEpochDay);
+        System.out.println("Past date is "+pastDate);
     }
 }
