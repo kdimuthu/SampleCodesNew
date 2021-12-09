@@ -89,5 +89,7 @@ public class DatesExamples {
         long randomEpochDay = ThreadLocalRandom.current().longs(start, end).findAny().getAsLong();
         LocalDate pastDate=LocalDate.ofEpochDay(randomEpochDay);
         System.out.println("Past date is "+pastDate);
+
+
     }
 }
