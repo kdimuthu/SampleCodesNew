@@ -1,5 +1,6 @@
 package JavaSamples.Dates;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -8,11 +9,12 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class DatesExamples {
-    public static void main(String []args) {
+    public static void main(String []args) throws ParseException {
 
      /*   // Create a date object
         LocalDate myObj = LocalDate.now();
@@ -89,6 +91,31 @@ public class DatesExamples {
         long randomEpochDay = ThreadLocalRandom.current().longs(start, end).findAny().getAsLong();
         LocalDate pastDate=LocalDate.ofEpochDay(randomEpochDay);
         System.out.println("Past date is "+pastDate);
+
+        //How to convert a string in to date & format
+        String DateToBeFormatted="25/12/2021";
+        System.out.println("Date as a String before formatted "+DateToBeFormatted);
+        //get the format of the date 'DateToBeFormatted'
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy", Locale.ENGLISH);
+        LocalDate formattedDateOfStringDate = LocalDate.parse(DateToBeFormatted, formatter);
+        System.out.println("Formatted Date "+formattedDateOfStringDate); // 2010-01-02
+
+        /*//Get the format of the current date
+        SimpleDateFormat currentFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
+        SimpleDateFormat requiredFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
+        Date fDate =requiredFormat.parse(DateToBeFormatted);
+        String formattedDate1 = currentFormat.format(fDate);
+        System.out.println("Formatted Current date is "+formattedDate1);*/
+
+        //Get the current date & format the date
+        Date todayDate = new Date();
+        System.out.println("Current Date is :"+todayDate);
+        //Get the formatted current date
+        SimpleDateFormat fm = new SimpleDateFormat("yyyy-MM-dd");
+        String formattedDate = fm.format(todayDate);
+        System.out.println("Formatted Current date is "+formattedDate);
+
+
 
 
     }
