@@ -7,8 +7,8 @@ import java.util.HashSet;
 
 public class Ex2 {
     public static void main(String[] args) {
-        int[] array1={1,3,5,7,9};
-        int[] array2={2,3,6,9,3};
+        int[] array1={2,23,34,44,5,31,22};
+        int[] array2={21,23,33,2,23,20,7};
         int i,j;
         ArrayList<Integer> commonElements=new ArrayList();
         HashSet<Integer> commonElementRemoveDuplicates=new HashSet();

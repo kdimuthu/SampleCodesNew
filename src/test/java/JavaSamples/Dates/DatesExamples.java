@@ -114,9 +114,5 @@ public class DatesExamples {
         SimpleDateFormat fm = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = fm.format(todayDate);
         System.out.println("Formatted Current date is "+formattedDate);
-
-
-
-
     }
 }
