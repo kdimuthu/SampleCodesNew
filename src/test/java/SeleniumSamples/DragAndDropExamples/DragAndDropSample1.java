@@ -82,6 +82,25 @@ public class DragAndDropSample1 {
                 + "dispatchEvent(element, dragEndEvent,dropEvent.dataTransfer);\n" + "}\n" + "\n"
                 + "var source = arguments[0];\n" + "var destination = arguments[1];\n"
                 + "simulateHTML5DragAndDrop(source,destination);", sourceElement, targetElement);
+    }
+
+    @Test
+    public void DragAndDropBy(){
+
+        WebDriverManager.chromedriver().setup();
+        //  System.setProperty("webdriver.chrome.driver", "./src/libs/chromedriver.exe");
+        driver=new ChromeDriver();
+        //Open the application
+        driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
+        // Store 'box A' as source element
+        WebElement sourceEle = driver.findElement(By.id("draggable"));
+        // Store 'box B' as source element
+        WebElement targetEle = driver.findElement(By.id("droppable"));
+        int targetEleXOffset = targetEle.getLocation().getX();
+        int targetEleYOffset = targetEle.getLocation().getY();
+        Actions actionProvider = new Actions(driver);
+        // Performs dragAndDropBy onto the  target element offset position
+        actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform();
 
 
     }
