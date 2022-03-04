@@ -1,7 +1,6 @@
 package AppiumExamples;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
@@ -9,11 +8,11 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class FirstTest {
+public class NativeAppAutomation {
     AppiumDriver driver;
 
     @Test
-    public void setUp() throws MalformedURLException
+    public void OpenANativeApp() throws MalformedURLException
     {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("deviceName", "Android Emulator");
@@ -27,5 +26,4 @@ public class FirstTest {
         driver.findElementByXPath("//android.widget.EditText[@text='Pin number']").sendKeys("345");
         driver.quit();
     }
-
 }
